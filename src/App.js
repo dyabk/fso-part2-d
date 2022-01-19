@@ -33,7 +33,7 @@ const App = ( props ) => {
       .then(response => {
         console.log(response)
       })
-    }
+    
 
     //setNotes(notes.concat(noteObject))
     //setNewNote('')
