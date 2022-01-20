@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Note from './components/Note'
+import noteService from './services/notes'
 
 const App = ( props ) => {
   const [notes, setNotes ] = useState([])
   const [newNote, setNewNote] = useState('')
   const [showAll, setShowAll] = useState(true)
   
- const hook = () => {
+  useEffect(() =>  {
     console.log('effect')
     axios
       .get('http://localhost:3001/notes')
@@ -15,9 +16,7 @@ const App = ( props ) => {
         console.log('promise fulfilled')
         setNotes(response.data)
       })
-  }
-  
-  useEffect(hook, [])
+  }, [])
 
   const addNote = (event) => {
     event.preventDefault()
