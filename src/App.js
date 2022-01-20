@@ -10,8 +10,8 @@ const App = ( props ) => {
   
   useEffect(() =>  {
     console.log('effect')
-    axios
-      .get('http://localhost:3001/notes')
+    noteService
+      .getAll()
       .then(response => {
         console.log('promise fulfilled')
         setNotes(response.data)
