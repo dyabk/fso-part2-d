@@ -45,7 +45,7 @@ const App = ( props ) => {
     : notes.filter(note => note.important)
 
   const toggleImportanceOf = (id) => {
-    console.log('importance of ' + id + ' needs to be toggled')
+    console.log(`importance of ${id} needs to be toggled`)
   }
 
   return (
