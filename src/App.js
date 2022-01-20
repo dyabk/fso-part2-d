@@ -46,7 +46,6 @@ const App = ( props ) => {
 
   const toggleImportanceOf = (id) => {
     const url = `http://localhost:3001/notes/${id}`
-    })
   }
 
   return (
