@@ -9,7 +9,6 @@ const App = ( props ) => {
   const [showAll, setShowAll] = useState(true)
   
   useEffect(() =>  {
-    console.log('effect')
     noteService
       .getAll()
       .then(initialNotes => {
@@ -48,8 +47,8 @@ const App = ( props ) => {
 
     noteService
       .update(id, changedNote)
-      .then(response => {
-        setNotes(notes.map(note => note.id != id ? note : response.data))
+      .then(returnedNote => {
+        setNotes(notes.map(note => note.id != id ? note : returnedNote))
     })
   }
 
