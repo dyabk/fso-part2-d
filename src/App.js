@@ -26,8 +26,8 @@ const App = ( props ) => {
       important: Math.random() < 0.5,
     }
 
-    axios
-      .post('http://localhost:3001/notes', noteObject)
+    noteService
+      .create(noteObject)
       .then(response => {
         setNotes(notes.concat(response.data))
         setNewNote('')
