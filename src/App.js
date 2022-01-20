@@ -12,9 +12,8 @@ const App = ( props ) => {
     console.log('effect')
     noteService
       .getAll()
-      .then(response => {
-        console.log('promise fulfilled')
-        setNotes(response.data)
+      .then(initialNotes => {
+        setNotes(initialNotes)
       })
   }, [])
 
