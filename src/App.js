@@ -45,7 +45,8 @@ const App = ( props ) => {
     : notes.filter(note => note.important)
 
   const toggleImportanceOf = (id) => {
-    console.log(`importance of ${id} needs to be toggled`)
+    const url = `http://localhost:3001/notes/${id}`
+    })
   }
 
   return (
